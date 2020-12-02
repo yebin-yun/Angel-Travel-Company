@@ -5,17 +5,19 @@
 
 <body bgcolor="white">
 
-<h3>Calculating the revenues</h3>
-
+<hr>
+<h3 style="font-size:25px; font-weight:bold;">Calculating the revenues</h3>
 <hr>
 
-<p>
-<a href="revenueCust.html" >Click here</a> 
+<p style="font-size:18px;">
+<a href="revenueCust.php" >Click here</a> 
 to see the revenues by customer.
 
-<p>
-<a href="revenueItin.html" >Click here</a>
+<p style="font-size:18px;">
+<a href="revenueItin.php" >Click here</a>
 to see the revenues by itinerary.
+
+<hr>
 
 <p>
 <a href="revenue.txt" >Contents</a>
