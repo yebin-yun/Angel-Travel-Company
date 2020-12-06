@@ -37,6 +37,8 @@ The revenue will be calculated based on the selected itinerary.
 		<option value="<?php echo $itinName; ?>"><?php echo $itinName; ?></option>
 	<?php
 	}
+	mysqli_free_result($result);
+	mysqli_close($conn);
 	?>
 	</select>
 	<input style="font-size:15px;" type="submit" value="Submit">
