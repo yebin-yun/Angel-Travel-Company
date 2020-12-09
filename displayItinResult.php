@@ -68,7 +68,7 @@ while($row=mysqli_fetch_array($result, MYSQLI_BOTH)){
 			echo "<td width='400'><span style='font-weight:bold'>Restaurant for Breakfast:</span> $row[place_name]</td>";
 			break;
 		case "L":
-			echo "<td width='400'><span style='font-weight:bold'>Restaurant for Lucnch:</span> $row[place_name]</td>";
+			echo "<td width='400'><span style='font-weight:bold'>Restaurant for Lunch:</span> $row[place_name]</td>";
 			break;
 		case "D":
 			echo "<td width='400'><span style='font-weight:bold'>Restaurant for Dinner:</span> $row[place_name]</td>";
