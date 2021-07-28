@@ -1,6 +1,7 @@
 <?php
 
-include('connectionData.txt');
+$path = $_GET['path'];
+include $path . '../connectionData.php';
 
 $conn = mysqli_connect($server, $user, $pass, $dbname, $port)
 or die('Error connecting to MySQL server.');
@@ -11,7 +12,7 @@ $table = mysqli_real_escape_string($conn, $table);
 
 <html>
 <head>
-  <title>Final Project - Angel Travel</title>
+  <title>Angel Travel</title>
 </head>
     
 <body bgcolor="white">
@@ -50,8 +51,6 @@ mysqli_close($conn);
 ?>
 
 <hr>
-<p>
-<a href="displayTable.txt" >Contents</a>
-of the PHP program that created this page.
+
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 
-include('connectionData.txt');
+$path = $_GET['path'];
+include $path . '../../connectionData.php';
 
 $conn = mysqli_connect($server, $user, $pass, $dbname, $port)
 or die('Error connecting to MySQL server.');
@@ -9,7 +10,7 @@ or die('Error connecting to MySQL server.');
 
 <html>
 <head>
-  <title>Final Project - Angel Travel</title>
+  <title>Angel Travel</title>
 </head>
     
 <body bgcolor="white">
@@ -127,8 +128,6 @@ mysqli_free_result($result);
 mysqli_close($conn);
 ?>
 <hr>
-<p>
-<a href="calculateRevenueItin.txt" >Contents</a>
-of the PHP program that created this page.
+
 </body>
 </html>

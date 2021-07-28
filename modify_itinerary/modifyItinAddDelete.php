@@ -1,6 +1,7 @@
 <?php
 
-include('connectionData.txt');
+$path = $_GET['path'];
+include $path . '../connectionData.php';
 
 $conn = mysqli_connect($server, $user, $pass, $dbname, $port)
 or die('Error connecting to MySQL server.');
@@ -37,7 +38,7 @@ mysqli_free_result($result);
 
 <html>
 <head>
-       <title>Final Project - Angel Travel</title>
+       <title>Angel Travel</title>
 </head>
 
 <body bgcolor="white">
@@ -130,10 +131,6 @@ if ($modOption == 'Add') {
 }
 ?>
 <hr>
-
-<p>
-<a href="modifyItinAddDelete.txt" >Contents</a>
-of the PHP program that created this page.
 
 </body>
 </html>

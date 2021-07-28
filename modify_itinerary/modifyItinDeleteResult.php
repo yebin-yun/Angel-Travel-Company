@@ -1,6 +1,7 @@
 <?php
 
-include('connectionData.txt');
+$path = $_GET['path'];
+include $path . '../connectionData.php';
 
 $conn = mysqli_connect($server, $user, $pass, $dbname, $port) or die('Error connecting to MySQL server.');
 
@@ -8,7 +9,7 @@ $conn = mysqli_connect($server, $user, $pass, $dbname, $port) or die('Error conn
 
 <html>
 <head>
-       <title>Final Project - Angel Travel</title>
+       <title>Angel Travel</title>
 </head>
 
 <body bgcolor="white">
@@ -57,10 +58,6 @@ else {
 mysqli_close($conn);
 ?>
 <hr>
-
-<p>
-<a href="modifyItinDeleteResult.txt" >Contents</a>
-of the PHP program that created this page.
 
 </body>
 </html>

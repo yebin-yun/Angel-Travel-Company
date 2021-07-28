@@ -1,6 +1,7 @@
 <?php
 
-include('connectionData.txt');
+$path = $_GET['path'];
+include $path . '../../connectionData.php';
 
 $conn = mysqli_connect($server, $user, $pass, $dbname, $port)
 or die('Error connecting to MYSQL server.');
@@ -9,7 +10,7 @@ or die('Error connecting to MYSQL server.');
 
 <html>
 <head>
-<title>Final Project - Angel Travel</title>
+<title>Angel Travel</title>
 </head>
 
 <body bgcolor="white">
@@ -38,10 +39,8 @@ mysqli_free_result($result);
 
 <?php
 if($row == "") {
-	echo "<p style='font-size:18px; color:red'> Error: There is no customer, called ".$firstName." ".$lastName.".</br></br><a style='font-size:18px; font-weight:bold; color:red' href='table.php'>Click here</a>
-to see the current customers of the Angel Travel Company. (Select Customer in the dropdown list when you are directed to a different browser.)<p>";
-	echo "<hr><p><a href='calculateRevenueCust.txt'>Contents</a>
-		of the PHP program that created this page.";
+	echo "<p style='font-size:18px; color:red'> Error: There is no customer, called ".$firstName." ".$lastName.".</br></br><a style='font-size:18px; font-weight:bold; color:red' href='../../view_table/table.php'>Click here</a>
+to see the current customers of the Angel Travel Company. (Select Customer in the dropdown list when you are directed to a different browser.)<p><hr>";
 	exit();
 
 }
@@ -154,8 +153,6 @@ mysqli_free_result($result);
 mysqli_close($conn);
 ?>
 <hr>
-<p>
-<a href="calculateRevenueCust.txt" >Contents</a>
-of the PHP program that created this page.
+
 </body>
 </html>

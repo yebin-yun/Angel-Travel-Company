@@ -1,6 +1,7 @@
 <?php
 
-include('connectionData.txt');
+$path = $_GET['path'];
+include $path . '../connectionData.php';
 
 $conn = mysqli_connect($server, $user, $pass, $dbname, $port)
 or die('Error connecting to MySQL server.');
@@ -9,23 +10,22 @@ or die('Error connecting to MySQL server.');
 
 <html>
 <head>
-    <title>Final Project - Angel Travel</title>
+       <title>Angel Travel</title>
 </head>
-    
+
 <body bgcolor="white">
 
 <hr>
-<h3 style="font-size:25px; font-weight:bold;">Calculating the revenues by itinerary</h3>
+<h3 style="font-size:25px; font-weight:bold;">Viewing the itinerary</h3>
 
 <hr>
 
-<p style="font-size:18px">
-Please select one of the itineraries on the dropdown list.</br>
-The revenue will be calculated based on the selected itinerary.
+<p style="font-size:18px"> Please select one of the itineraries on the dropdown list.<br>
+You will be able to view the attractions and restaurants included in the selected itinerary ordered by the scheduled time.
 <p>
 
-<form action="calculateRevenueItin.php" method="POST">
-<select style="font-size:15px;" name="itindropdown" required>
+<form action="displayItinResult.php" method="POST">
+<select style="font-size:15px;" name="itinerary" required>
 	<option value="" disabled selected hidden>---Select Itinerary---</option>
 	<?php
         $query = "SELECT * FROM Itinerary";
@@ -38,7 +38,6 @@ The revenue will be calculated based on the selected itinerary.
 	<?php
 	}
 	mysqli_free_result($result);
-	mysqli_close($conn);
 	?>
 	</select>
 	<input style="font-size:15px;" type="submit" value="Submit">
@@ -46,11 +45,6 @@ The revenue will be calculated based on the selected itinerary.
 </form>
 <hr>
 
-<p>
-<a href="revenueItin.txt">Contents</a>
-of the PHP program that created this page.
-
 </body>
 </html>
-
 
