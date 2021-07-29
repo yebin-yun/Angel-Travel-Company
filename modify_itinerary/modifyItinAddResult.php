@@ -98,18 +98,7 @@ $query .= $dayNum . "', '";
 $query .= $arrival . "', '";
 $query .= $departure . "', '";
 $query .= $city . "');";
-
-echo "<p style='font-size:20px; font-weight:bold;'>Query: </br><p>";
-
-// Formatting the query	
-$lines = preg_split("/[\r\n]+/", $query);
-for ($x = 0; $x < count($lines); $x++) {
-	print $lines[$x]."<br>";	
-}
 ?>
-<hr>
-
-<p style='font-size:20px; font-weight:bold;'>Query Result: </br><p>
 
 <?php
 if (mysqli_query($conn, $query)) {

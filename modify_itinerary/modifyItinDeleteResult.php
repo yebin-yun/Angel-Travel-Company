@@ -40,14 +40,7 @@ $query .= $attrID . "');";
 
 mysqli_free_result($result);
 ?>
-
-<p style='font-size:20px; font-weight:bold;'>Query: </br><p>
-
-<?php echo $query; ?>
-<hr>
-
-<p style='font-size:20px; font-weight:bold;'>Query Result: </br><p>
-
+    
 <?php
 if (mysqli_query($conn, $query)) {
 	echo "<p style='font-size:18px;'> A new attraction is successfully deleted from the selected itinerary. <p>";

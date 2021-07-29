@@ -46,10 +46,6 @@ to see the current customers of the Angel Travel Company. (Select Customer in th
 }
 ?>
 
-<p style="font-size:20px; font-weight:bold;">
-Query: </br>
-<p>
-
 <?php
 $query = "SELECT cust_id, total_agency_cost, total_attraction_ticket_cost, total_restaurant_cost, total_hotel_cost, (total_agency_cost + total_attraction_ticket_cost + total_restaurant_cost + total_hotel_cost) AS total_cost
 FROM (SELECT cust_id, SUM(agency_fee_per_day*duration) AS total_agency_cost
@@ -96,22 +92,7 @@ $query .= $custID."\n\t\tGROUP BY cust_id) totalRestaurantCost USING(cust_id)
 			JOIN Hotel USING(hotel_id, room_type)
 		WHERE cust_id = ";
 $query .= $custID."\n\t\tGROUP BY cust_id) totalHotelCost USING(cust_id)";
-
-// Formatting the query
-$lines = preg_split("/[\r\n]+/", $query);
-for ($x = 0; $x < count($lines); $x++) {
-	$tabs = strspn ($lines[$x], "\t");
-	if ($tabs > 0) {
-		print str_repeat("&emsp;",$tabs*4);
-	}
-	print $lines[$x]."<br>";
-}
 ?>
-<hr>
-
-<p style="font-size:20px; font-weight:bold;">
-Query Result:</br>
-<p>
 
 <?php
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
