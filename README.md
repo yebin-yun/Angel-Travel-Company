@@ -30,7 +30,7 @@ with exceptions of overlaps when a restaurant is within a theme park.
 
 ## Applications
 
-![main page](images/main page.png)
+![main page](https://user-images.githubusercontent.com/87594239/127569010-8d80635d-3a98-4476-9c76-0f0bac17364a.png)
 
 Applications are to calculate revenue, to modify an existing itinerary, and to display the
 itinerary schedule. Calculating revenue is broken down into two categories: by customer and by
@@ -38,9 +38,8 @@ itinerary. Modifying an existing itinerary is broken into two categories: adding
 Displaying is demonstrating all itineraries, their attractions, and their restaurants.
 
 ### Calculate revenue
-
-![before login](images/calculate by itinerary.mov)
-
+#### Calculate revenue by itinerary
+![calculate by itinerary](https://user-images.githubusercontent.com/87594239/127569289-807517c9-30ce-48f1-a8c8-68118e1e3209.gif)
 Calculating revenue by itinerary helps employees to know which itinerary sets are most
 popular and lucrative. Results are shown in a table below the query, which break the itinerary
 revenue down into agency processing fees, attraction ticket fees, restaurant fees, and total
@@ -48,6 +47,8 @@ revenue per selected itinerary. This information helps the company decide how to
 offered itineraries especially in accordance with seasons, holidays, etc. 
 Customer.
 
+#### Calculate revenue by customer
+![calculate by customer](https://user-images.githubusercontent.com/87594239/127569308-2dca46e6-6d33-463d-8b54-8795c61bd9b1.gif)
 Calculating revenue by customer enables employees’ access to the total spending on all
 reservations, including hotels, per customer overall. For customers who book multiple
 reservations, all those costs’ of each reservation are summed together. Most customers have
@@ -68,6 +69,8 @@ attraction be added into his or her itinerary. Other reasons an itinerary may be
 attraction proving unprofitable, attraction closed, area unsafe or inaccessible, attraction
 recently opened, attraction’s significant gain or loss in popularity due to holiday or season.
 
+#### Add an attraction
+![add attraction](https://user-images.githubusercontent.com/87594239/127569500-ee120067-b3b5-4bcb-9247-2fb8faf23cdc.gif)
 If a user tries to add an attraction, they must first select the itinerary to add to in the
 dropdown list. The dropdown list will show only the attractions that are not included in the
 selected itinerary. Also, the only options in the dropdown list will be in the same city as that
@@ -82,13 +85,15 @@ must be enough time in the selected itinerary at the time-slot on the day that t
 add the attraction. If any of those validity checks failed, it will print out the error message on
 the browser and terminate executing the php file.
 
+#### Delete an attraction
+![delete attraction](https://user-images.githubusercontent.com/87594239/127569562-07a47e3a-7c92-482b-b9b9-48d4232b8f9e.gif)
 If a user tries to delete an attraction, they must similarly enter the itinerary to edit. The
 only choices a user will have to choose from for deletion are attractions that exist in the
 selected itineraries. Having only relevant options to choose from ensures that the user makes a
 valid selection to delete.
 
 ### Display the itinerary schedule
-
+![display itinerary](https://user-images.githubusercontent.com/87594239/127569607-578165f8-4f76-4f31-b54a-5215f86b42e3.gif)
 Displaying the itinerary schedule shows all itineraries, their attractions, their
 restaurants, and the time window planned to enter and exit each, with exceptions of overlap
 for restaurants within parks that don’t require leaving the park to visit the restaurant. These are
