@@ -19,7 +19,7 @@ offered attractions, visited restaurants and information about those among other
 
 The following is the ER Diagram displaying the database structure of ‘mydb’ for the Angel Travel Company:
 
-![ER](images/ER Diagram.png)
+![er-diagram](https://user-images.githubusercontent.com/87594239/134275110-839ccaad-d379-4f38-bf17-78d0252a03df.png)
 
 The restaurants and attractions are real; restaurants were researched based on area
 and type of food. The addresses of attractions and restaurants included in the tables are the
